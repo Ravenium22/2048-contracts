@@ -1,8 +1,20 @@
-# Play 2048 on Monad
+# Play 2048 on Megaeth Testnet
 
-**Check out a full writeup of how we built this [here](https://blog.monad.xyz/blog/build-2048).**
+**Check out how this was adapted from the original Monad version [here](https://blog.monad.xyz/blog/build-2048).**
 
-Smart contracts that let you play a game of 2048 entirely on-chain. The game is deployed on [Monad testnet](https://testnet.monad.xyz/) to showcase how Monad is well suited for building fast paced games with a high volume of interactions.
+Smart contracts that let you play a game of 2048 entirely on-chain. This version is configured for deployment on [Megaeth testnet](https://carrot.megaeth.com/) to showcase how the ultra-fast Megaeth network is well suited for building fast-paced games with a high volume of interactions.
+
+### About Megaeth Testnet
+
+Megaeth testnet features:
+- **Network Name**: MEGA Testnet
+- **Chain ID**: 6342
+- **Native Token**: MEGA Testnet Ether (ETH)
+- **RPC URL**: https://carrot.megaeth.com/rpc
+- **Block Explorer**: https://megaexplorer.xyz
+- **Performance**: 10ms mini blocks, 1s EVM blocks
+- **Block Size**: Up to 2 Giga gas per block
+- **EIP Support**: EIP-7702, EIP-1559
 
 ### About the game
 
@@ -16,7 +28,7 @@ From the [2048 Wikipedia](<https://en.wikipedia.org/wiki/2048_(video_game)>) pag
 
 ## Deployments
 
-`Monad2048.sol` is deployed on Monad testnet: [0xe0FA8195AE92b9C473c0c0c12c2D6bCbd245De47](https://testnet.monadexplorer.com/address/0xe0FA8195AE92b9C473c0c0c12c2D6bCbd245De47).
+`Monad2048.sol` will be deployed on Megaeth testnet. Update this section with the deployment address after running the deployment script.
 
 ## Development
 
@@ -38,6 +50,12 @@ $ forge build
 
 ```shell
 $ forge test
+```
+
+### Deploy to Megaeth Testnet
+
+```shell
+$ forge script script/Deploy.s.sol --rpc-url https://carrot.megaeth.com/rpc --private-key $PRIVATE_KEY --broadcast
 ```
 
 ### Format
